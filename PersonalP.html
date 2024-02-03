@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Honk&family=Lora:ital,wght@1,500&family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <script src="script.js"></script>
+  <title>Me And Myself</title>
+  </head>
+  <body>
+   <header>
+    <div class="navbar">
+      <div class="logo"><a href="#">this is me!</a></div>
+      <ul class="links">
+        <li><a href="#homepage" class="active">Homepage</a></li>
+        <li><a href="#about">about</a></li>
+        <li><a href="#skills">skills/resume</a></li>
+        <li><a href="#projects">projects</a></li>
+      </ul>
+
+      <a href="#" class="action_btn">Get Started</a>
+      <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+     <div class="dropdown_menu">
+      <li><a href="#homepage">Homepage</a></li>
+      <li><a href="#about">about</a></li>
+      <li><a href="#skills">skills/resume</a></li>
+      <li><a href="#projects">projects</a></li>
+      <li><a href="#" class="action_btn">Get Started</a></li>
+     </div>
+   </header>
+
+   <main>
+    <section id="allsections">
+    <section id="homepage">
+      <h1>Welcome</h1>
+      <p>Meet a diligent student from Kiryat Tivon, currently in their third year of Industrial Engineering at Ruppin Academic Center.<br>
+         With a passion for problem-solving and innovation, they navigate the complexities of their coursework with dedication and curiosity. <br>
+         Outside the classroom, they engage in extracurricular activities, showcasing a well-rounded personality. Known for their friendly demeanor and collaborative spirit, they actively contribute to the academic community. <br>
+         Balancing academic rigor with a zest for life, they explore the intersection of theory and practical application. As they progress in their studies, their potential for making meaningful contributions to the field becomes increasingly evident.</p>
+    </section>
+    <section id="about">
+      <h1>A little about me</h1>
+      <p>In the vibrant town of Kiryat Tivon, our industrious student embarks on the exciting journey of their third year in Industrial Engineering at Ruppin Academic Center. A true enthusiast for the fusion of technology and creativity, they have a penchant for designing innovative solutions that blend efficiency and sustainability. Outside the lecture halls, they immerse themselves in campus life, actively participating in engineering clubs and workshops, enhancing their practical skills and fostering a collaborative network.
+        Known for their unwavering determination, our student balances academic pursuits with a dynamic lifestyle. Whether organizing study groups or leading community initiatives, they embody leadership qualities that extend beyond the classroom. In their spare time, you might find them exploring the picturesque landscapes of Kiryat Tivon or unwinding with a thought-provoking book. With each passing semester, their passion for industrial engineering deepens, paving the way for a promising future where they're poised to make a significant impact on the industry.
+        </p>
+    </section>
+    <section id="skills">
+      <h1>my skills & resume</h1>
+        <h3>Innovative Problem Solver:</h3>
+        <br>
+        With a keen analytical mind, you excel at identifying and dissecting complex problems within the realm of industrial engineering. Your innovative approach involves combining theoretical knowledge with creative thinking to devise efficient and effective solutions.<br>
+        <h3>Data Analytics Proficiency:</h3> 
+        <br>
+        Possessing a strong grasp of data analytics tools, you skillfully analyze large datasets to derive actionable insights. Your ability to extract meaningful patterns and trends aids in informed decision-making, a crucial aspect of industrial engineering.<br>
+        <h3>Advanced Programming Skills:</h3>
+        <br>
+        Proficient in a variety of programming languages, your coding expertise enhances your capability to develop customized solutions and automate processes. This technical prowess not only streamlines tasks but also contributes to the optimization of industrial systems.<br>
+        <h3>Effective Communication:</h3>
+        <br>
+        Your excellent communication skills bridge the gap between technical concepts and practical applications. Whether conveying complex ideas to colleagues or presenting solutions to stakeholders, your clarity and precision make you an effective communicator in the field of engineering.<br>
+        <h3>Project Management Acumen:</h3>
+        <br>
+        As a seasoned project manager, you adeptly oversee timelines, resources, and team dynamics. Your organized approach ensures the successful execution of industrial engineering projects, from conceptualization to implementation.<br>
+        <h3>Adaptability and Continuous Learning:</h3>
+        <br>
+        In the dynamic field of industrial engineering, your adaptability shines. A natural inclination towards learning ensures that you stay updated on the latest technological advancements and industry trends, fostering a proactive and forward-thinking mindset.<br>
+        <h3>Team Collaboration:</h3>
+        <br>
+        Recognizing the importance of teamwork, you thrive in collaborative environments. Your ability to leverage diverse skill sets within a team fosters synergy, contributing to the successful completion of projects that require a multifaceted approach.<br>
+        <h3>Attention to Detail:</h3>
+        <br>
+        Your meticulous attention to detail ensures the accuracy and precision of your work. This quality is particularly crucial in industrial engineering, where small oversights can have significant consequences. Your thorough approach reflects a commitment to delivering high-quality results.<br>
+        These skills collectively paint a picture of a well-rounded and capable engineer, equipped to tackle the challenges and opportunities within the dynamic field of industrial engineering.
+    </section>
+    <section id="projects">
+      <h1>What have i accomplished </h1>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto, asperiores cumque? Deserunt illum incidunt labore similique soluta, optio tenetur ducimus corporis veniam provident odit blanditiis itaque quasi officiis aut! Cupiditate?</p>
+    </section>
+  </section>
+   </main>
+
+   <script>
+    const toggleBtn = document.querySelector('.toggle_btn')
+    const toggleBtnIcon = document.querySelector('.toggle_btn i')
+    const dropDownMenu = document.querySelector('.dropdown_menu')
+
+    toggleBtn.onclick =function() {
+      dropDownMenu.classList.toggle('open')
+      const isOpen = dropDownMenu.classList.contains('open')
+
+      toggleBtnIcon.classList= isOpen
+      ? 'fa-solid fa-xmark'
+      : 'fa-solid fa-bars'
+    }
+   </script>
+  </body>
+
+</html>
